@@ -5,8 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"build:test": "vite build --mode test && cp package.json build && npm install --omit=dev --prefix build",
-		"build:prod": "vite build --mode production && cp package.json build && npm install --omit=dev --prefix build",
+		"build:azure": "vite build && cp package.json build && npm install --omit=dev --prefix build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -19,7 +18,7 @@
 		"db:studio": "prisma studio",
 		"icons:download": "node scripts/download-icons.js",
 		"icons:fetch-all": "node scripts/fetch-all-icons-from-db.js",
-		"build:combell:test": "vite build --mode test && cp package.json build",
+		"build:combell": "vite build && cp package.json build",
 		"build": "npm install --omit=dev",
 		"serve": "node ."
 	},

@@ -1,11 +1,12 @@
 import * as Sentry from '@sentry/sveltekit';
-import './chunks/_sentry-inject-global-values-file-DTYvZL-m.js';
+import { p as public_env } from './chunks/shared-server-Bskssk4F.js';
+import './chunks/_sentry-inject-global-values-file-xAwdszk6.js';
 import './chunks/_commonjsHelpers-Bi63GUIs.js';
 
 !(function() {
   try {
     var e = "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof globalThis ? globalThis : "undefined" != typeof self ? self : {};
-    e.SENTRY_RELEASE = { id: "99069e462683fde0ac533c0f9d57bdbde12d31be" };
+    e.SENTRY_RELEASE = { id: "8a555e7f1a2aff28713c57fe6955c74723dfdd47" };
   } catch (e2) {
   }
 })();
@@ -13,14 +14,13 @@ import './chunks/_commonjsHelpers-Bi63GUIs.js';
   try {
     (function() {
       var e = "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof globalThis ? globalThis : "undefined" != typeof self ? self : {}, n = new e.Error().stack;
-      n && (e._sentryDebugIds = e._sentryDebugIds || {}, e._sentryDebugIds[n] = "801d423c-2519-4194-9c29-87fd04b9bad1", e._sentryDebugIdIdentifier = "sentry-dbid-801d423c-2519-4194-9c29-87fd04b9bad1");
+      n && (e._sentryDebugIds = e._sentryDebugIds || {}, e._sentryDebugIds[n] = "2b2b9c65-4380-4cb4-a81b-8c32867ea2be", e._sentryDebugIdIdentifier = "sentry-dbid-2b2b9c65-4380-4cb4-a81b-8c32867ea2be");
     })();
   } catch (e) {
   }
 }
-const PUBLIC_SENTRY_DSN = "https://55315769caab23cac417fcf03cf73910@o4510602874978304.ingest.de.sentry.io/4510612600651856";
 Sentry.init({
-  dsn: PUBLIC_SENTRY_DSN,
+  dsn: public_env.PUBLIC_SENTRY_DSN,
   tracesSampleRate: 1,
   // Enable logs to be sent to Sentry
   enableLogs: true
